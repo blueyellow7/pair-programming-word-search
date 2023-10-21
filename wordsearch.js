@@ -17,16 +17,16 @@ const wordSearch = (letters, word) => {
 
 const transpose = function(letters) {
     let array = [];
-        for (let i = 0; i < letters[0].length; i++) {
-          array.push([]);
+    for (let i = 0; i < letters[0].length; i++) {
+        array.push([]);
+    }
+    for (let row = 0; row < letters.length; row++) {
+        for (let col = 0; col < letters[row].length; col++) {
+        array[col][row] = letters[row][col];
         }
-        for (let row = 0; row < letters.length; row++) {
-          for (let col = 0; col < letters[row].length; col++) {
-            array[col][row] = letters[row][col];
-          }
-        }
-        return array;
-      };
+    }
+    return array;
+};
 
 module.exports = wordSearch;
 
